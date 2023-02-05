@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello!</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Code", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+a,
+a:visited{
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero {
+  height: 100vh;
+}
+
+.hello {
+  font-weight: 500;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.header {
+  position: absolute;
+  max-width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-contact {
+  padding: 20px 30px;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 20px;
+  margin-top: 30px;
+  color: #fff;
+  font-family: "Fira Code", sans-serif;
+}
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, [col] auto);
+  grid-template-rows: repeat(3, [row] auto);
+  background-color: inherit;
+  color: #444;
+}
+
+.box {
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+}
+
+.a {
+  background-image: linear-gradient(to right, red, yellow);
+  grid-column: col / span 2;
+  grid-row: row;
+}
+.b {
+  background-image: linear-gradient(to right, #7f00ff, #e100ff);
+  grid-column: col 3 / span 2;
+  grid-row: row;
+}
+.c {
+  background-image: linear-gradient(to right, #2d388a, #00aeef);
+  grid-column: col;
+  grid-row: row 2;
+}
+.d {
+  background-image: linear-gradient(to right, #00a1ff, #00ff8f);
+  grid-column: col 2 / span 3;
+  grid-row: row 2;
+}
+
+.e {
+  grid-column: col / span 4;
+  grid-row: row 3;
+}
+.specialization {
+  position: relative;
+}
+.specialization-content {
+  display: flex;
+  margin-top: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  align-items: center;
+  max-width: 750px;
+  justify-content: space-around;
+}
+.specialization-header {
+  font-size: 2rem;
+  margin-right: 20px;
+}
+.realistic-marker-highlight {
+  position: relative;
+}
+.realistic-marker-highlight:before {
+  content: "";
+  background-color: #ff6db7;
+  width: 100%;
+  height: 1em;
+  position: absolute;
+  z-index: -1;
+  filter: url(#marker-shape);
+  left: -0.25em;
+  top: 0.1em;
+  padding: 0 0.25em;
+}
+.wrapper-typing {
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 28ch;
+  animation: typing 2s steps(26), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: greenyellow;
+  }
+}
+
+.volunteer {
+  position: relative;
+}
+.ethos-header {
+  font-size: 32px;
+
+}
+.ethos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 750px;
+  margin: 20px auto 20px auto;
+}
+
+.org-logo {
+  width: 100px;
+  height: auto;
+}
+.org-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 400px;
+  margin-top:40px ;
+}
+.dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 10px;
+}
+.circle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  margin: 0 auto;
+}
+.c1 {
+  background-color: greenyellow
+}
+.c2 {
+  background-color: blueviolet
+}
+.c3 {
+  background-color: yellow
+}
+.c4 {
+  background-color: palevioletred
+}
+
+footer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.footer-header{
+  font-size: 32px;
+}
+
+  </style>
+  <body>
+    <div class="hero">
+      <div class="header">
+        <p class="hello">
+          Hi, I'm Jhury.<br />
+        </p>
+        <div class="wrapper-typing">
+          <div class="typing-demo">
+            I'm a Full-Stack Developer.
+          </div>
+        </div>
+        <p class="description">
+          Hi there! I am a full-stack developer with a strong focus on
+          JavaScript. I am currently pursuing a degree in a Computer Engineering
+          and always looking to improve my skills and stay up-to-date with the
+          latest developments in technology. Whether it's developing new
+          applications or troubleshooting existing ones, I am dedicated to
+          delivering high-quality, efficient code.
+        </p>
+        <button class="btn-contact"><a href="https://www.facebook.com/makisekurenai/">Say hi!</a></button>
+      </div>
+    </div>
+    <div class="showcase">
+      <div class="wrapper">
+        <div class="box a"></div>
+        <div class="box b"></div>
+        <div class="box c"></div>
+        <div class="box d"></div>
+        <div class="box e"></div>
+      </div>
+    </div>
+    <div class="specialization">
+      <div class="specialization-content">
+        <p class="specialization-header">The Grind</p>
+        <p>
+          As a young <span class="realistic-marker-highlight">Computer Enthusiast</span>, I discovered my passion for<br><span class="realistic-marker-highlight">programming</span> in my early teenage years. 
+          I taught myself the basics of coding through online resources and spent hours every day experimenting and building small projects as a <span class="realistic-marker-highlight">Hobby</span>. 
+          Over time, my skills improved, and I began to delve into <span class="realistic-marker-highlight"> web </span><span class="realistic-marker-highlight">development</span>, specifically.
+        </p>
+    </div>
+    <div class="circle-wrapper">
+      <span class="dot c1"></span>
+    <span class="dot c2"></span>
+    <span class="dot c3"></span>
+    <span class="dot c4"></span>
+    </div>
+    
+    <section>
+      <div class="ethos-container">
+        <p class="ethos-header">Why I do, What I do</p>
+        <p>More than anything, I want to impart my knowledge to different kinds of people. I want to leave a legacy, not as a great programmer,
+          but as a great teacher. I want to inspire other people do what they want to do. I want to be the person who opens opportunities for others to
+          succeed.
+        </p>
+        <div class="org-grid">
+          <img class="org-logo" src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-dsc/contentbuilder/GDG-Bevy-ChapterThumbnail.png" alt="gdsc">
+          <img class="org-logo" src="https://scontent.fmnl9-1.fna.fbcdn.net/v/t39.30808-6/293402365_429961369145489_7828425812407934260_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=174925&_nc_eui2=AeHaQX90Naz2P1i_ClBl9tFpz5-SOYR3-jbPn5I5hHf6Npru9I1crh4ry87lQ2tinqf4cuczBwObsxb0Ks6qGYs0&_nc_ohc=1Gx5vS2E4j4AX9xnHXO&_nc_ht=scontent.fmnl9-1.fna&oh=00_AfCuR7iB3SgyoJXzMSxxcsuDzfzATskkNvankjguMtngFg&oe=63E4AA8B" alt="cpec">
+          <img class="org-logo" src="https://scontent.fmnl9-1.fna.fbcdn.net/v/t39.30808-6/327700270_570697844647402_5212748443988498922_n.png?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEegMyQvd5An7TalYHCp59GmKGqdMLh_M2Yoap0wuH8zeEMEM-J06X5zEb8ks4Pq2dFH6Pdbxcat4nNFGUNzecd&_nc_ohc=uIe7qNGjEDwAX_n7nLR&tn=gvv_lqDpe0ie2xfA&_nc_ht=scontent.fmnl9-1.fna&oh=00_AfD-LynJ0ZX3g-Js4GEeEBCjkIJN_lVV1qGlqFYLYng5uQ&oe=63E4BA6E" alt="devcon">
+        </div>
+      </div>
+    </section>
+    <hr />
+    <footer>
+      <p class="footer-header">Always One Step Closer. To the Future</p>
+      <p>Copyright Jhury Kevin Lastre, 2023</p>
+    </footer>
+  </body>
+</html>
